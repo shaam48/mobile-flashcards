@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Platform, Alert } from 'react-native';
 import { connect } from 'react-redux';
 import TextButton from './TextButton';
 import { styles } from '../utils/styles';
-// import { setLocalNotification, clearLocalNotification } from '../utils/helpers';
+import { setLocalNotification, clearLocalNotification } from '../utils/helpers';
 
 class Quiz extends Component {
 
@@ -18,7 +18,7 @@ class Quiz extends Component {
 
   componentDidMount() {
     if(Platform.OS === "ios" || Platform.OS === "android") {
-      // clearLocalNotification().then(setLocalNotification);
+      clearLocalNotification().then(setLocalNotification);
     }
     const title = this.props.route.params.title;
     const questions = this.props.decks[title].questions;

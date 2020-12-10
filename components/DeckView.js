@@ -3,7 +3,7 @@ import { View, Text, Platform, Alert } from 'react-native';
 import { connect } from 'react-redux';
 import { styles } from '../utils/styles';
 import TextButton from './TextButton';
-// import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
+import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
 
 class DeckView extends Component {
 
@@ -35,7 +35,7 @@ class DeckView extends Component {
   startQuiz = () => {
     if (this.state.length !== 0) {
       if(Platform.OS === "ios" || Platform.OS === "android"){
-        // clearLocalNotification().then(setLocalNotification())
+        clearLocalNotification().then(setLocalNotification())
       }
 
       this.props.navigation.navigate(
