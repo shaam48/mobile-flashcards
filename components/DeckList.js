@@ -26,7 +26,6 @@ class DeckList extends Component {
 
 	render() {
 		const db = this.props.decks;
-		debugger;
     const data = Object.keys(db).map(key => (
       {
         'key': key,

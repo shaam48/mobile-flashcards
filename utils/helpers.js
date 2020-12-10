@@ -42,7 +42,7 @@ export function setLocalNotification () {
                 createNotification(),
                 {
                   time: tomorrow.getTime() + 6000,  // almost every minute it should show the notification
-                  repeat: 'minute',
+                  repeat: 'day',
                 }
               );
 
